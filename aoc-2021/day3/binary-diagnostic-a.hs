@@ -1,8 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import Control.Arrow ((&&&))
 import Data.List (transpose)
-import qualified Data.Map as Data.Map.Internal
 
 data Bit = One | Zero
   deriving (Eq, Show)
@@ -28,21 +26,14 @@ countFreq cmp b =
           )
    in counter b (0, 0)
 
-oxyGenBit :: [Bit] -> Bit
-oxyGenBit = countFreq (\z o -> if o >= z then One else Zero)
+findMax = countFreq (\z o -> if z > o then Zero else One)
 
-co2ScrubBit :: [Bit] -> Bit
-co2ScrubBit = countFreq (\z o -> if o >= z then Zero else One)
+findMin = countFreq (\z o -> if z > o then One else Zero)
 
-diagnose :: ([Bit] -> Bit) -> Int -> [[Bit]] -> [Bit]
-diagnose _ i [s] = drop i s
-diagnose sys i ss =
-  if i >= length (head ss)
-    then []
-    else
-      let workingSet = map (!! i) ss
-          thisBit = sys workingSet
-       in thisBit : diagnose sys (i + 1) (filter (\bitS -> bitS !! i == thisBit) ss)
+diagnose :: ([Bit] -> Bit) -> [[Bit]] -> [Bit]
+diagnose sys ss =
+  let workingSet = transpose ss
+   in map sys workingSet
 
 toDec :: [Bit] -> Integer
 toDec =
@@ -69,9 +60,8 @@ main = do
   input <- getContents
   let inputLines = lines input
       inputLineBits = map mkbits inputLines
-      oxy = diagnose oxyGenBit 0 inputLineBits
-      co2 = diagnose co2ScrubBit 0 inputLineBits
-  print (map toString inputLineBits)
-  print (toString oxy)
-  print (toString co2)
-  print (toDec oxy * toDec co2)
+      gamma = diagnose findMax inputLineBits
+      epsilon = diagnose findMin inputLineBits
+  print (toString gamma)
+  print (toString epsilon)
+  print (toDec gamma * toDec epsilon)
