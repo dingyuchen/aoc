@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-import Data.Set (fromList)
+import Data.Set (fromList, member, notMember)
 
 data Part = Upper | Lower
   deriving (Show)
@@ -27,9 +27,9 @@ makeSeat ss =
    in Seat r c
 
 getId s =
-  let rowValue = binSearch 0 127 (row s)
+  let rowValue = binSearch 1 126 (row s)
       colValue = binSearch 0 7 (col s)
-   in 8 * rowValue + colValue
+   in rowValue * 8 + colValue
 
 binSearch :: Int -> Int -> [Part] -> Int
 binSearch lb _ [] = lb
@@ -42,5 +42,7 @@ main :: IO ()
 main = do
   inputs <- fmap lines getContents
   let seats = map makeSeat inputs
-      ids = map getId seats
-  print $ maximum ids
+      ids = fromList $ map getId seats
+      allPossible = [r * 8 + c | r <- [1 .. 126], c <- [0 .. 7]]
+      leftovers = filter (`notMember` ids) allPossible
+  print $ filter (\x -> (x + 1) `member` ids && (x - 1) `member` ids) leftovers
