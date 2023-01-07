@@ -2,9 +2,7 @@ with import <nixpkgs> {};
 
 pkgs.mkShell {
   nativeBuildInputs = [
-    (haskellPackages.ghcWithPackages(hp: [
-      hp.xmonad
-      hp.xmonad-contrib
-    ]))
+    ghc
+    haskell-language-server
   ];
 }
