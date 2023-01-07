@@ -1,0 +1,30 @@
+name: aoc-2022
+version: 0.1.0
+
+authors:
+  - dingyuchen <hi@ding.gg>
+
+description: |
+  Advent of Code 2022 in Crystal
+
+targets:
+  day01:
+    main: day01/main.cr
+  day02:
+    main: day02/main.cr
+  day03:
+    main: day03/rucksack_reorganization.cr
+  day04:
+    main: day04/camp_cleanup.cr
+  day05:
+    main: day05/supply_stacks.cr
+# dependencies:
+#   pg:
+#     github: will/crystal-pg
+#     version: "~> 0.5"
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+# license: MIT
