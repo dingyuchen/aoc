@@ -18,6 +18,12 @@ targets:
     main: day04/camp_cleanup.cr
   day05:
     main: day05/supply_stacks.cr
+  day06:
+    main: day06/tuning_trouble.cr
+  day07:
+    main: day07/no_space_left_on_device.cr
+  tree:
+    main: day07/tree.cr
 # dependencies:
 #   pg:
 #     github: will/crystal-pg
