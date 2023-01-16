@@ -22,6 +22,10 @@ targets:
     main: day06/tuning_trouble.cr
   day07:
     main: day07/no_space_left_on_device.cr
+  day08:
+    main: day08/treetop_tree_house.cr
+  day09:
+    main: day09/rope_bridge.cr
   tree:
     main: day07/tree.cr
 # dependencies:
