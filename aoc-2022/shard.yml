@@ -32,6 +32,8 @@ targets:
     main: day11/monkey_in_the_middle.cr
   tree:
     main: day07/tree.cr
+  day12:
+    main: day12/hill_climbing_algorithm.cr
 # dependencies:
 #   pg:
 #     github: will/crystal-pg

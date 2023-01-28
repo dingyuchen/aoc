@@ -1,5 +1,4 @@
 require "../lib/*"
-require "compiler/crystal/syntax" # requiring syntax as /parser requires VirtualFile
 include ChallengeInput
 
 def eval(action)
