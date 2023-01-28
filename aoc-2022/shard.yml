@@ -28,6 +28,8 @@ targets:
     main: day09/rope_bridge.cr
   day10:
     main: day10/cathode_ray_tube.cr
+  day11:
+    main: day11/monkey_in_the_middle.cr
   tree:
     main: day07/tree.cr
 # dependencies:
