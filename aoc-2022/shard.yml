@@ -36,6 +36,8 @@ targets:
     main: day12/hill_climbing_algorithm.cr
   day13:
     main: day13/distress_signal.cr
+  day14:
+    main: day14/regolith_reservoir.cr
 # dependencies:
 #   pg:
 #     github: will/crystal-pg
