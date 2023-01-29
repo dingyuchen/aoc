@@ -4,17 +4,20 @@ This repo contains my attempts for AOC 2020 - 2022.
 
 ## Running the codes
 
-The development environment is setup with `nix` and the main language of choice (for 2022) is `Rust`.
+- Running a specific day
+```
+shards run day01
+```
 
-> I have not figured out how to perform ELF patching for nix's `mkShell` at the moment.
-> You will need to have `cargo` installed
+- Running tests
+```
+crystal spec spec/file_spec.cr
+```
 
-I have set up a cargo project for each individual day.
-
-`cd` into the day folder, run
+or just
 
 ```
-cat input.in | cargo run
+crystal spec
 ```
 
 ### Running the codes (2021 & 2020)

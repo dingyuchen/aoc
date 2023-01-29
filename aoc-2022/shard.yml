@@ -34,6 +34,8 @@ targets:
     main: day07/tree.cr
   day12:
     main: day12/hill_climbing_algorithm.cr
+  day13:
+    main: day13/distress_signal.cr
 # dependencies:
 #   pg:
 #     github: will/crystal-pg
