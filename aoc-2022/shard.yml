@@ -38,6 +38,8 @@ targets:
     main: day13/distress_signal.cr
   day14:
     main: day14/regolith_reservoir.cr
+  day15:
+    main: day15/beacon_exclusion_zone.cr
 # dependencies:
 #   pg:
 #     github: will/crystal-pg
