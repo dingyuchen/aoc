@@ -1,0 +1,267 @@
+# dune exec ./bin/day02/soln.exe -w
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/bytedance/.cache/dune/db
+# Workspace root: /Users/bytedance/aoc/aoc-2023-ocaml
+# Auto-detected concurrency: 12
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" : "/Users/bytedance/aoc/aoc-2023-ocaml/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }
+$ /Users/bytedance/.opam/5.1.0/bin/ocamlc.opt -config > /var/folders/w3/3h5l9mhj1pvdtpqbwvfnfw540000gn/T/dune_b4e944_output
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/day02/.soln.eobjs/byte -I lib/.aoc_2023.objs/byte -no-alias-deps -opaque -o bin/day02/.soln.eobjs/byte/dune__exe__Soln.cmi -c -intf bin/day02/soln.mli)
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/day02/soln.exe lib/aoc_2023.cmxa bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx)
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 3, characters 10-11:
+> 3 | type Game =
+>               ^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 15, characters 0-1:
+> 15 | | _ -> failwith "invalid format"
+>      ^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 14, characters 81-82:
+> 14 | game_str::records -> let game_id = String.split_on_char ' ' game_str |> List.nth 1 |> int_of_string in
+>                                                                                       ^
+> Error: This expression has type int but an expression was expected of type
+>          'a list
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", lines 15-17, characters 0-5:
+> 15 | {
+> 16 |      id = game_id; 
+> 17 |     }
+> Error: Some record fields are undefined: green red blue
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", lines 16-19, characters 0-5:
+> 16 | {
+> 17 |      id = game_id; 
+> 18 |     green = greens;
+> 19 |     }
+> Error: Some record fields are undefined: red blue
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 30, characters 81-90:
+> 30 |       List.find_index (fun num_word -> String.starts_with ~prefix:num_word line) num_words
+>                                                                                       ^^^^^^^^^
+> Error: Unbound value num_words
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 1, characters 0-13:
+> 1 | open Aoc_2023
+>     ^^^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open Aoc_2023.
+>
+> File "bin/day02/soln.ml", line 5, characters 2-10:
+> 5 |   id: int;
+>       ^^^^^^^^
+> Error (warning 69 [unused-field]): record field id is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 6, characters 0-11:
+> 6 | green: int;
+>     ^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field green is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 7, characters 0-9:
+> 7 | red: int;
+>     ^^^^^^^^^
+> Error (warning 69 [unused-field]): record field red is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 8, characters 0-10:
+> 8 | blue: int;
+>     ^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field blue is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 11, characters 4-9:
+> 11 | let parse line = 
+>          ^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value parse.
+>
+> File "bin/day02/soln.ml", line 14, characters 10-17:
+> 14 | game_str::records -> let game_id = List.nth (String.split_on_char ' ' game_str) 1 |> int_of_string in
+>                ^^^^^^^
+> Error (warning 27 [unused-var-strict]): unused variable records.
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 1, characters 0-13:
+> 1 | open Aoc_2023
+>     ^^^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open Aoc_2023.
+>
+> File "bin/day02/soln.ml", lines 4-5, characters 4-3:
+> 4 | ....id : int
+> 5 |   ;............
+> Error (warning 69 [unused-field]): record field id is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", lines 5-6, characters 4-3:
+> 5 | ....green : int
+> 6 |   ;..........
+> Error (warning 69 [unused-field]): record field green is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", lines 6-7, characters 4-3:
+> 6 | ....red : int
+> 7 |   ;...........
+> Error (warning 69 [unused-field]): record field red is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 7, characters 4-14:
+> 7 |   ; blue : int
+>         ^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field blue is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 10, characters 4-9:
+> 10 | let parse line =
+>          ^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value parse.
+>
+> File "bin/day02/soln.ml", line 13, characters 16-23:
+> 13 |   | game_str :: records ->
+>                      ^^^^^^^
+> Error (warning 27 [unused-var-strict]): unused variable records.
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 22, characters 20-25:
+> 22 |     { id = game_id; green = greens; red = reds; blue = blues }
+>                          ^^^^^
+> Error: The record field green belongs to the type draw
+>        but is mixed here with fields of type game
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 22, characters 20-25:
+> 22 |     { id = game_id; green = greens; red = reds; blue = blues }
+>                          ^^^^^
+> Error: The record field green belongs to the type draw
+>        but is mixed here with fields of type game
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 27, characters 0-3:
+> 27 | let parse line =
+>      ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 27, characters 0-3:
+> 27 | let parse
+>      ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 27, characters 0-3:
+> 27 | let parse line =
+>      ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 18, characters 25-26:
+> 18 | [i; "green"] -> {green = i; red = 0; blue = 0;}
+>                               ^
+> Error: This expression has type string but an expression was expected of type
+>          int
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 18, characters 25-26:
+> 18 | [i; "green"] -> {green = i; red = 0; blue = 0;}
+>                               ^
+> Error: This expression has type string but an expression was expected of type
+>          int
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 18, characters 25-26:
+> 18 | [i; "green"] -> {green = i; red = 0; blue = 0;}
+>                               ^
+> Error: This expression has type string but an expression was expected of type
+>          int
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 21, characters 38-39:
+> 21 |         | [ i; "green" ] -> { green = i; red = 0; blue = 0 }
+>                                            ^
+> Error: This expression has type string but an expression was expected of type
+>          int
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 46, characters 20-25:
+> 46 |     { id = game_id; green = greens; red = reds; blue = blues }
+>                          ^^^^^
+> Error: The record field green belongs to the type draw
+>        but is mixed here with fields of type game
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 44, characters 20-25:
+> 44 |     { id = game_id; green = greens; red = reds; blue = blues }
+>                          ^^^^^
+> Error: The record field green belongs to the type draw
+>        but is mixed here with fields of type game
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 1, characters 0-13:
+> 1 | open Aoc_2023
+>     ^^^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open Aoc_2023.
+>
+> File "bin/day02/soln.ml", lines 10-11, characters 4-3:
+> 10 | ....id : int
+> 11 |   ;..................
+> Error (warning 69 [unused-field]): record field id is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 11, characters 4-21:
+> 11 |   ; draws : draw list
+>          ^^^^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field draws is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 38, characters 4-9:
+> 38 | let parse line =
+>          ^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value parse.
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", lines 10-11, characters 4-3:
+> 10 | ....id : int
+> 11 |   ;..................
+> Error (warning 69 [unused-field]): record field id is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 11, characters 4-21:
+> 11 |   ; draws : draw list
+>          ^^^^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field draws is never read.
+> (However, this field is used to build or mutate values.)
+>
+> File "bin/day02/soln.ml", line 48, characters 4-9:
+> 48 | let games = 
+>          ^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value games.
+[2]
+$ (cd _build/default && /Users/bytedance/.opam/5.1.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/day02/.soln.eobjs/byte -I bin/day02/.soln.eobjs/native -I lib/.aoc_2023.objs/byte -I lib/.aoc_2023.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/day02/.soln.eobjs/native/dune__exe__Soln.cmx -c -impl bin/day02/soln.ml)
+> File "bin/day02/soln.ml", line 52, characters 9-24:
+> 52 | let () = List.filter_map
+>               ^^^^^^^^^^^^^^^
+> Error: This expression has type ('a -> 'b option) -> 'a list -> 'b list
+>        but an expression was expected of type unit
+[2]
