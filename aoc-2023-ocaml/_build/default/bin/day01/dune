@@ -1,4 +1,0 @@
-(executable
- (public_name day1)
- (name soln)
- (libraries aoc_2023))
