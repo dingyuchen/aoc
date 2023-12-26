@@ -27,8 +27,8 @@ let parse_line line =
 ;;
 
 let cards =
-  let _lines = Stdin.read_file "inputs/day04.txt" in
-  let lines =
+  let lines = Stdin.read_file "inputs/day04.txt" in
+  let _lines =
     [ "Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53"
     ; "Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19"
     ; "Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1"
@@ -51,14 +51,35 @@ let count_matching card =
 
 (*part1*)
 let () =
-  let wins = List.map count_matching cards in 
-  let () = List.iter print_int wins in
-  let () = print_newline () in
   List.map count_matching cards
-  |> List.map (Int.shift_left 1)
+  |> List.map (fun wins -> if wins = 0 then 0 else Int.shift_left 1 (wins - 1))
   |> List.fold_left ( + ) 0
   |> string_of_int
   |> print_endline
 ;;
 
 (*part2*)
+
+let rec pairwise_sum l1 l2 =
+  match l2 with
+  | [] -> []
+  | x :: xs ->
+    (match l1 with
+     | [] -> l2
+     | y :: ys -> (x + y) :: pairwise_sum ys xs)
+;;
+
+let () =
+  let _, total =
+    List.fold_left
+      (fun (copies, total) card ->
+        let wins = count_matching card in
+        let curr_copies = List.hd copies in
+        let gen_copies = List.init wins (fun _ -> curr_copies) in
+        let new_copies = pairwise_sum gen_copies (List.tl copies) in
+        new_copies, total + curr_copies)
+      (List.init (List.length cards) (fun _ -> 1), 0)
+      cards
+  in
+  string_of_int total |> print_endline
+;;
